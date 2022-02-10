@@ -1,6 +1,7 @@
-num_1 = input("Give number, blet: ")
-num_2 = input("Give one more number, nx: ")
+weight = input("Wut weight: ")
+measurement = input("(K)g or (L)bs: ")
 
-total = float(num_1) + float(num_2)
-
-print(total)
+if measurement == "K":
+    print(weight + "kg")
+else:
+    print(weight + "lbs")
