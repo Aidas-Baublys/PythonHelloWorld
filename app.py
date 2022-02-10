@@ -1,13 +1,8 @@
-print("Welcome to weight unit converter!")
+secret_number = 4
 
-weight = float(input("What's your weight? Numbers only, please: "))
-unit_input = input("(K)g or (L)bs? Type letter, please: ")
+guess = int(input("Guess a number from 1 to 9: "))
 
-if unit_input.upper() == "K":
-    unit = "lbs"
-    weight //= 0.45
-else:
-    unit = "kg"
-    weight *= 0.45
+while guess != secret_number:
+    guess = int(input("Guess a number from 1 to 9: "))
 
-print(f"Your weight is {weight}{unit}")
+print("Bravo!")
