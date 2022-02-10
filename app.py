@@ -1,7 +1,7 @@
-weight = input("Wut weight: ")
-measurement = input("(K)g or (L)bs: ")
+good_credit = False
+high_income = True
 
-if measurement == "K":
-    print(weight + "kg")
+if not good_credit and high_income:
+    print("Cool")
 else:
-    print(weight + "lbs")
+    print("Nope")
