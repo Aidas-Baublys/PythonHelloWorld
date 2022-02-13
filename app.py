@@ -1,8 +1,7 @@
 while True:
-    command = input("> ")
-    formatted_command = command.upper()
+    command = input("> ").upper()
 
-    if formatted_command == "HELP":
+    if command == "HELP":
         msg = """
     type:
     
@@ -11,11 +10,11 @@ while True:
     stop - stops the car.
     quit - exits the program.
     """
-    elif formatted_command == "START":
+    elif command == "START":
         msg = "Car started, ready to GTA"
-    elif formatted_command == "STOP":
+    elif command == "STOP":
         msg = "Car stopped"
-    elif formatted_command == "QUIT":
+    elif command == "QUIT":
         print("Bey!")
         break
     else:
