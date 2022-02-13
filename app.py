@@ -1,3 +1,5 @@
+is_started = False
+
 while True:
     command = input("> ").upper()
 
@@ -10,12 +12,20 @@ start - starts the car.
 stop - stops the car.
 quit - exits the program.
     
-    Press enter to execute.
+Press enter to execute.
     """
     elif command == "START":
-        msg = "Car started, ready to GTA"
+        if is_started:
+            msg = "Car already started"
+        else:
+            is_started = True
+            msg = "Car started, ready to GTA"
     elif command == "STOP":
-        msg = "Car stopped"
+        if is_started:
+            is_started = False
+            msg = "Car stopped"
+        else:
+            msg = "Car already stopped"
     elif command == "QUIT":
         print("Bey!")
         break
