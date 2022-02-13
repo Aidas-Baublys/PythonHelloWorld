@@ -3,12 +3,12 @@ while True:
 
     if command == "HELP":
         msg = """
-    Type:
+Type:
     
-    help - shows this explanation.
-    start - starts the car.
-    stop - stops the car.
-    quit - exits the program.
+help - shows this explanation.
+start - starts the car.
+stop - stops the car.
+quit - exits the program.
     
     Press enter to execute.
     """
