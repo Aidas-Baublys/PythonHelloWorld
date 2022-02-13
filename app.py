@@ -1,16 +1,24 @@
-secret_number = 1
-tries = 3
+while True:
+    command = input("> ")
+    formatted_command = command.upper()
 
-print("GUESS THE SECRET NUMBER" + "!" * secret_number)
-print(f"{tries} tries left")
-guess = int(input("Guess a number from 0 to 9: "))
+    if formatted_command == "HELP":
+        msg = """
+    type:
+    
+    help - shows this explanation.
+    start - starts the car.
+    stop - stops the car.
+    quit - exits the program.
+    """
+    elif formatted_command == "START":
+        msg = "Car started, ready to GTA"
+    elif formatted_command == "STOP":
+        msg = "Car stopped"
+    elif formatted_command == "QUIT":
+        print("Bey!")
+        break
+    else:
+        msg = "Sorry, bro, no comprende"
 
-while guess != secret_number and tries > 1:
-    tries -= 1
-    print(f"{tries} left")
-    guess = int(input("Guess a number from 0 to 9: "))
-
-if guess == secret_number:
-    print("Bravo!")
-else:
-    print(f"Loser! It was {secret_number}")
+    print(msg)
