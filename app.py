@@ -1,15 +1,11 @@
-msg = input("> ")
-words = msg.split(" ")
+class Person:
+    def __init__(self, name):
+        self.name = name
 
-emojis = {
-    ":)": "😊",
-    ":(": "😢",
-    ":o": "😮"
-}
+    def talk(self):
+        print("Blah, blah")
 
-output = ""
 
-for word in words:
-    output += emojis.get(word, word) + " "
-
-print(output)
+person = Person("Lopchikas")
+person.talk()
+print(person.name)
