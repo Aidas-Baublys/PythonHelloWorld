@@ -1,9 +1,15 @@
-numbers = [1, 0, 15, 12, 3, 4]
+msg = input("> ")
+words = msg.split(" ")
 
-biggest_number = numbers[0]
+emojis = {
+    ":)": "😊",
+    ":(": "😢",
+    ":o": "😮"
+}
 
-for number in numbers:
-    if biggest_number < number:
-        biggest_number = number
+output = ""
 
-print(biggest_number)
+for word in words:
+    output += emojis.get(word, word) + " "
+
+print(output)
