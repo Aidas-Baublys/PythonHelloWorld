@@ -1,35 +1,9 @@
-is_started = False
+numbers = [1, 0, 15, 12, 3, 4]
 
-while True:
-    command = input("> ").upper()
+biggest_number = numbers[0]
 
-    if command == "HELP":
-        msg = """
-Type:
-    
-help - shows this explanation.
-start - starts the car.
-stop - stops the car.
-quit - exits the program.
-    
-Press enter to execute.
-    """
-    elif command == "START":
-        if is_started:
-            msg = "Car already started"
-        else:
-            is_started = True
-            msg = "Car started, ready to GTA"
-    elif command == "STOP":
-        if is_started:
-            is_started = False
-            msg = "Car stopped"
-        else:
-            msg = "Car already stopped"
-    elif command == "QUIT":
-        print("Bey!")
-        break
-    else:
-        msg = "Sorry, bro, no comprende"
+for number in numbers:
+    if biggest_number < number:
+        biggest_number = number
 
-    print(msg)
+print(biggest_number)
